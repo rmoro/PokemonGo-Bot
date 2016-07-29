@@ -84,10 +84,10 @@ class SeenFortWorker(object):
                                 'RECYCLE_INVENTORY_ITEM' in response_dict_recycle['responses'] and \
                                     'result' in response_dict_recycle['responses']['RECYCLE_INVENTORY_ITEM']:
                                 result = response_dict_recycle['responses']['RECYCLE_INVENTORY_ITEM']['result']
-                            if result is 1: # Request success
-                                logger.log("[+] Recycling success", 'green')
-                            else:
-                                logger.log("[+] Recycling failed!", 'red')
+                                if result is 1: # Request success
+                                    logger.log("[+] Recycling success", 'green')
+                                else:
+                                    logger.log("[+] Recycling failed!", 'red')
                 else:
                     logger.log("[#] Nothing found.", 'yellow')
 
